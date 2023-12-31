@@ -29,3 +29,6 @@ next: NULL
 ****************
 
 The next field will be used to create a linked list of memory segments and this will be used for reallocation of memory, splitting, merging
+
+Also, this linked list of meta blocks along with allocated blocks can have memory fragmentation issues.
+where the combined free block can satisfy an old request but because they are free in fragments they cannot be used.
