@@ -12,3 +12,20 @@ A. malloc, calloc, free
 
 Q. system calls for mem mgmt?
 A. brk, sbrk
+
+Q. How does free know how much memory to release?
+A. free - internally keeps a track of the associated memory to a pointer by using metablocks just before the actual struct.
+
+****************
+block A
+allocated
+Memory say 30 B
+****************
+meta info about
+block A
+isFree: False
+size: 30 B 
+next: NULL
+****************
+
+The next field will be used to create a linked list of memory segments and this will be used for reallocation of memory, splitting, merging
