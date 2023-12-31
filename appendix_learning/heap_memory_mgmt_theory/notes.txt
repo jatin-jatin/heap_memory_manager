@@ -1,0 +1,14 @@
+> how malloc and free work?
+> Internal management of Heap memory by Linux OS
+> fragmentation
+> system calls for memory management
+
+Q. What is heap memory?
+A. Continuous part of virtual address space of the process from which a process claims
+and reclaims memory during runtime.
+
+Q. Functions for mem mgmt?
+A. malloc, calloc, free
+
+Q. system calls for mem mgmt?
+A. brk, sbrk
